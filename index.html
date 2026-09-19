@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pool Route Book - Pool Service & Route Planner for Pool Cleaners</title>
+    <meta name="description" content="Plan your weekly pool route, log every service visit with water readings and photos, and send PDF reports to customers. Built for independent pool technicians and small pool service businesses. No account, no cloud, works offline.">
+    <meta name="keywords" content="pool route app, pool service software, pool cleaner app, pool chemistry log, water chemistry tracker, pool route planner, pool maintenance record, pool service report, hot tub service, pool tech">
+    <meta property="og:title" content="Pool Route Book - Pool Service & Route Planner">
+    <meta property="og:description" content="Plan the week, log every visit, keep every pool's history in your pocket.">
+    <meta property="og:image" content="images/shot1.jpg">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏊</text></svg>">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6; color: #12232b; background: #f7fbfd;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header {
+            background: linear-gradient(135deg, #0891b2 0%, #0e7490 55%, #155e75 100%);
+            color: white; padding: 80px 0 60px; text-align: center;
+        }
+        header h1 { font-size: 2.5rem; margin-bottom: 18px; font-weight: 700; }
+        header p { font-size: 1.3rem; opacity: .95; max-width: 720px; margin: 0 auto 30px; }
+        .cta-button {
+            display: inline-block; background: white; color: #0e7490; padding: 16px 40px;
+            border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 1.1rem;
+            transition: transform .2s, box-shadow .2s; box-shadow: 0 4px 15px rgba(0,0,0,.2);
+        }
+        .cta-button:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,.3); }
+        .hero-shots { margin-top: 50px; display: flex; justify-content: center; gap: 18px; flex-wrap: wrap; }
+        .hero-shots img { max-width: 210px; border-radius: 14px; box-shadow: 0 10px 30px rgba(0,0,0,.35); }
+        section { padding: 80px 0; }
+        .features { background: white; }
+        h2 { text-align: center; font-size: 2.2rem; margin-bottom: 14px; }
+        .sub { text-align: center; color: #5c7480; font-size: 1.1rem; max-width: 720px; margin: 0 auto 46px; }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+        .feature { text-align: center; }
+        .feature-icon { font-size: 3rem; margin-bottom: 18px; }
+        .feature h3 { font-size: 1.4rem; margin-bottom: 12px; color: #0e7490; }
+        .feature p { color: #55697a; font-size: 1.02rem; }
+        .benefits { background: #eaf5f9; }
+        .benefits-list { max-width: 820px; margin: 0 auto; }
+        .benefit-item { background: white; padding: 28px 30px; margin-bottom: 18px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,.05); }
+        .benefit-item h3 { color: #0e7490; margin-bottom: 8px; font-size: 1.25rem; }
+        .benefit-item p { color: #55697a; }
+        .shots { background: white; }
+        .shot-row { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+        .shot-row img { max-width: 190px; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,.12); }
+        .pricing { background: #f7fbfd; text-align: center; }
+        .pricing-cards { display: flex; justify-content: center; gap: 26px; margin-top: 46px; flex-wrap: wrap; }
+        .pricing-card { background: white; padding: 36px 32px; border-radius: 14px; min-width: 260px; max-width: 300px; box-shadow: 0 4px 15px rgba(0,0,0,.08); display: flex; flex-direction: column; }
+        .pricing-card h3 { font-size: 1.6rem; margin-bottom: 6px; color: #0e7490; }
+        .price { font-size: 2.4rem; font-weight: 700; margin: 16px 0; }
+        .price-period { font-size: 1rem; color: #5c7480; font-weight: normal; }
+        .pricing-card ul { list-style: none; margin: 22px 0; text-align: left; flex: 1; }
+        .pricing-card li { padding: 9px 0; border-bottom: 1px solid #e6eef2; font-size: .98rem; }
+        .pricing-card li:before { content: "✓ "; color: #0891b2; font-weight: bold; margin-right: 8px; }
+        .tag { display: inline-block; background: #0891b2; color: white; font-size: .78rem; padding: 4px 12px; border-radius: 20px; margin-bottom: 10px; }
+        .note { margin-top: 34px; color: #5c7480; font-size: .95rem; }
+        footer { background: #12232b; color: #cbd9e0; padding: 40px 0; text-align: center; }
+        footer a { color: #7dd3fc; text-decoration: none; }
+        @media (max-width: 600px) { header h1 { font-size: 1.9rem; } header p { font-size: 1.1rem; } .hero-shots img { max-width: 44%; } }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Pool Route Book</h1>
+            <p>Plan your weekly route, log every service visit, and keep each customer's pool history in one place — built for independent pool techs, not enterprise software.</p>
+            <a href="https://apps.apple.com/app/id6804212671" class="cta-button" target="_blank" rel="noopener">Download on App Store</a>
+            <div class="hero-shots">
+                <img src="images/shot1.jpg" alt="Weekly pool route schedule">
+                <img src="images/shot2.jpg" alt="Pool service visit log with water chemistry">
+                <img src="images/shot3.jpg" alt="Customer and pool details">
+            </div>
+        </div>
+    </header>
+
+    <section class="features">
+        <div class="container">
+            <h2>Everything a Route Needs</h2>
+            <p class="sub">The five things you actually do on a route — scheduled, recorded and provable.</p>
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">🗓️</div>
+                    <h3>Plan Your Week</h3>
+                    <p>Assign pools to weekdays with a service time and duration, see the whole route at a glance, and add a one-off visit when a customer calls. Your recurring route stays organised week after week.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🧪</div>
+                    <h3>Log Real Readings</h3>
+                    <p>Record free chlorine, pH, total alkalinity and CYA at the pool edge, plus every chemical you added. Numbers go into the pool's history instead of a notebook you'll never open again.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">✅</div>
+                    <h3>Your Own Checklist</h3>
+                    <p>Skim, brush, vacuum, empty baskets — tick the tasks you actually perform, or build your own checklist to match how you work. Nothing gets forgotten mid-route.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">📄</div>
+                    <h3>PDF Service Reports</h3>
+                    <p>Turn a completed visit into a clean PDF report with readings, chemicals, tasks, notes and before/after photos. Send it to the customer and the "did you even come?" conversation ends.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">📍</div>
+                    <h3>Drive Straight There</h3>
+                    <p>Every pool carries its address, gate and access notes, phone number and service history. Tap the address to open it in Apple Maps and head to your next stop.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🔒</div>
+                    <h3>No Account, Works Offline</h3>
+                    <p>Your pool and customer records stay on your device. No sign-up, no dashboard to configure, no monthly software bill. It works at the back of a yard with no signal.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="benefits">
+        <div class="container">
+            <h2>Built for Solo Techs and Small Operators</h2>
+            <p class="sub">Most pool software is priced and designed for companies with an office. You drive the route yourself.</p>
+            <div class="benefits-list">
+                <div class="benefit-item">
+                    <h3>Ditch the Notebook and the Group Chat</h3>
+                    <p>No more paper route sheets, spreadsheets, or photos dumped in a messaging thread. Every pool, reading and visit lives in one app you already have in your pocket.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>Proof You Were There</h3>
+                    <p>Before and after photos with the date, the chemicals you added and the tasks you completed. When a customer questions a visit, you send the report instead of arguing.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>History That Answers Questions</h3>
+                    <p>"When did we last shock this pool?" Open the pool and its whole service history is there — including gate codes and equipment notes you'd otherwise relearn every season.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>Fast Because You're On Your Feet</h3>
+                    <p>Logging a visit takes seconds, one-handed, standing next to the water. That is the whole design brief — no forms, no required fields, no training.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="shots">
+        <div class="container">
+            <h2>Take a Look Inside</h2>
+            <p class="sub">Real screens, real route.</p>
+            <div class="shot-row">
+                <img src="images/shot1.jpg" alt="Weekly route" loading="lazy">
+                <img src="images/shot2.jpg" alt="Service visit log" loading="lazy">
+                <img src="images/shot3.jpg" alt="Pool details" loading="lazy">
+                <img src="images/shot4.jpg" alt="Water chemistry readings" loading="lazy">
+                <img src="images/shot5.jpg" alt="PDF service report" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2>Simple Pricing</h2>
+            <p class="sub">Start free and manage your first pools with no charge. Pool Route Pro unlocks unlimited pools and routes.</p>
+            <div class="pricing-cards">
+                <div class="pricing-card">
+                    <span class="tag">Most popular</span>
+                    <h3>Monthly</h3>
+                    <div class="price">$5.99<span class="price-period">/month</span></div>
+                    <ul>
+                        <li>Unlimited pools</li>
+                        <li>Unlimited routes &amp; visits</li>
+                        <li>Water chemistry history</li>
+                        <li>PDF service reports</li>
+                        <li>Cancel anytime</li>
+                    </ul>
+                    <a href="https://apps.apple.com/app/id6804212671" class="cta-button" target="_blank" rel="noopener" style="background:#0e7490;color:white;">Try It Free</a>
+                </div>
+                <div class="pricing-card" style="border: 2px solid #0891b2;">
+                    <h3>Yearly</h3>
+                    <div class="price">$19.99<span class="price-period">/year</span></div>
+                    <p style="color:#15803d;font-weight:600;margin-bottom:6px;">Save 72% vs monthly</p>
+                    <ul>
+                        <li>Everything in Monthly</li>
+                        <li>One charge, whole season</li>
+                        <li>Best value for full-time routes</li>
+                    </ul>
+                    <a href="https://apps.apple.com/app/id6804212671" class="cta-button" target="_blank" rel="noopener" style="background:#0e7490;color:white;">Try It Free</a>
+                </div>
+                <div class="pricing-card">
+                    <h3>Lifetime</h3>
+                    <div class="price">$24.99<span class="price-period">one-time</span></div>
+                    <ul>
+                        <li>Everything in Pro</li>
+                        <li>No renewals, ever</li>
+                        <li>Own it for as long as you run a route</li>
+                    </ul>
+                    <a href="https://apps.apple.com/app/id6804212671" class="cta-button" target="_blank" rel="noopener" style="background:#0e7490;color:white;">Get Lifetime</a>
+                </div>
+            </div>
+            <p class="note">Local prices include each country's taxes (Apple regional pricing). Family sharing not applicable.</p>
+        </div>
+    </section>
+
+    <section class="features" id="support">
+        <div class="container">
+            <h2>Support</h2>
+            <p style="text-align:center; color:#55697a;">Question, feature request, or something not working on a route? Email me directly — I read every message and usually reply within a day.</p>
+            <p style="text-align:center; margin-top:18px;"><a href="mailto:huangxiaohao7023@icloud.com" style="color:#0e7490;font-weight:600;font-size:1.1rem;">huangxiaohao7023@icloud.com</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Pool Route Book. Built for independent pool service technicians.</p>
+            <p style="margin-top: 10px; font-size: .9rem;">
+                <a href="https://xiaohao7023.github.io/poolroute-legal/privacy.html">Privacy Policy</a> |
+                <a href="https://xiaohao7023.github.io/poolroute-legal/terms.html">Terms of Use</a> |
+                <a href="https://xiaohao7023.github.io/poolroute-legal/support.html">Support</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
