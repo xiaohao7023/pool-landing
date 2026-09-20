@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro químico de piscinas — cloro, pH, alcalinidad y estabilizante</title>
+    <meta name="description" content="Anota cloro libre, pH, alcalinidad total y estabilizante junto al agua en segundos. Cada lectura entra al historial de esa piscina: ves tendencias, pruebas tu trabajo y respondes «¿cuándo fue el último choque?».">
+    <link rel="canonical" href="https://xiaohao7023.github.io/pool-landing/es/pool-water-chemistry-log.html">
+    <link rel="alternate" hreflang="en" href="https://xiaohao7023.github.io/pool-landing/pool-water-chemistry-log.html">
+    <link rel="alternate" hreflang="es" href="https://xiaohao7023.github.io/pool-landing/es/pool-water-chemistry-log.html">
+    <link rel="alternate" hreflang="pt" href="https://xiaohao7023.github.io/pool-landing/pt/pool-water-chemistry-log.html">
+    <link rel="alternate" hreflang="x-default" href="https://xiaohao7023.github.io/pool-landing/pool-water-chemistry-log.html">
+    <meta property="og:title" content="Registro químico de piscinas — cloro, pH, alcalinidad y estabilizante"><meta property="og:description" content="Anota cloro libre, pH, alcalinidad total y estabilizante junto al agua en segundos. Cada lectura entra al historial de esa piscina: ves tendencias, pruebas tu trabajo y respondes «¿cuándo fue el último choque?».">
+    <meta property="og:image" content="https://xiaohao7023.github.io/pool-landing/images/shot1.jpg"><meta property="og:type" content="website">
+    <meta property="og:url" content="https://xiaohao7023.github.io/pool-landing/es/pool-water-chemistry-log.html">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Necesito suscripción para registrar agua?", "acceptedAnswer": {"@type": "Answer", "text": "No — registrar lecturas y químicos es gratis para empezar. Pro quita el límite de piscinas y guarda el historial completo."}}, {"@type": "Question", "name": "¿Qué lecturas puedo guardar?", "acceptedAnswer": {"@type": "Answer", "text": "Cloro libre, pH, alcalinidad total y estabilizante (CYA), más los químicos que aplicaste con cantidades, notas y fotos opcionales por visita."}}, {"@type": "Question", "name": "¿Puedo ver la tendencia de una piscina?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Cada piscina guarda todo su historial en la app: los vaivenes de pH o la demanda de cloro repetida se notan de un vistazo."}}, {"@type": "Question", "name": "¿Es una calculadora de química?", "acceptedAnswer": {"@type": "Answer", "text": "No — es la capa de registro: tú mides el agua, la app guarda qué encontraste y qué hiciste al respecto."}}]}</script>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏊</text></svg>">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6; color: #12232b; background: #f7fbfd;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header {
+            background: linear-gradient(135deg, #0891b2 0%, #0e7490 55%, #155e75 100%);
+            color: white; padding: 80px 0 60px; text-align: center;
+        }
+        header h1 { font-size: 2.5rem; margin-bottom: 18px; font-weight: 700; }
+        header p { font-size: 1.3rem; opacity: .95; max-width: 720px; margin: 0 auto 30px; }
+        .cta-button {
+            display: inline-block; background: white; color: #0e7490; padding: 16px 40px;
+            border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 1.1rem;
+            transition: transform .2s, box-shadow .2s; box-shadow: 0 4px 15px rgba(0,0,0,.2);
+        }
+        .cta-button:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,.3); }
+        .hero-shots { margin-top: 50px; display: flex; justify-content: center; gap: 18px; flex-wrap: wrap; }
+        .hero-shots img { max-width: 210px; border-radius: 14px; box-shadow: 0 10px 30px rgba(0,0,0,.35); }
+        section { padding: 80px 0; }
+        .features { background: white; }
+        h2 { text-align: center; font-size: 2.2rem; margin-bottom: 14px; }
+        .sub { text-align: center; color: #5c7480; font-size: 1.1rem; max-width: 720px; margin: 0 auto 46px; }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+        .feature { text-align: center; }
+        .feature-icon { font-size: 3rem; margin-bottom: 18px; }
+        .feature h3 { font-size: 1.4rem; margin-bottom: 12px; color: #0e7490; }
+        .feature p { color: #55697a; font-size: 1.02rem; }
+        .benefits { background: #eaf5f9; }
+        .benefits-list { max-width: 820px; margin: 0 auto; }
+        .benefit-item { background: white; padding: 28px 30px; margin-bottom: 18px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,.05); }
+        .benefit-item h3 { color: #0e7490; margin-bottom: 8px; font-size: 1.25rem; }
+        .benefit-item p { color: #55697a; }
+        .shots { background: white; }
+        .shot-row { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+        .shot-row img { max-width: 190px; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,.12); }
+        .pricing { background: #f7fbfd; text-align: center; }
+        .pricing-cards { display: flex; justify-content: center; gap: 26px; margin-top: 46px; flex-wrap: wrap; }
+        .pricing-card { background: white; padding: 36px 32px; border-radius: 14px; min-width: 260px; max-width: 300px; box-shadow: 0 4px 15px rgba(0,0,0,.08); display: flex; flex-direction: column; }
+        .pricing-card h3 { font-size: 1.6rem; margin-bottom: 6px; color: #0e7490; }
+        .price { font-size: 2.4rem; font-weight: 700; margin: 16px 0; }
+        .price-period { font-size: 1rem; color: #5c7480; font-weight: normal; }
+        .pricing-card ul { list-style: none; margin: 22px 0; text-align: left; flex: 1; }
+        .pricing-card li { padding: 9px 0; border-bottom: 1px solid #e6eef2; font-size: .98rem; }
+        .pricing-card li:before { content: "✓ "; color: #0891b2; font-weight: bold; margin-right: 8px; }
+        .tag { display: inline-block; background: #0891b2; color: white; font-size: .78rem; padding: 4px 12px; border-radius: 20px; margin-bottom: 10px; }
+        .note { margin-top: 34px; color: #5c7480; font-size: .95rem; }
+        footer { background: #12232b; color: #cbd9e0; padding: 40px 0; text-align: center; }
+        footer a { color: #7dd3fc; text-decoration: none; }
+        @media (max-width: 600px) { header h1 { font-size: 1.9rem; } header p { font-size: 1.1rem; } .hero-shots img { max-width: 44%; } }
+    
+        .langs { text-align:center; padding-bottom:10px; font-size:.85rem; opacity:.95; }
+        .langs a { color:#a5e3f7; }
+    </style>
+</head>
+<body>
+    <nav><div class="container" style="display:flex;gap:22px;justify-content:center;flex-wrap:wrap;padding-top:12px;padding-bottom:12px;">
+        <a style="color:#fff;font-weight:600;" href="index.html">Inicio</a>
+        <a href="pool-route-app.html" style="color:#a5e3f7;">App de rutas</a>
+        <a href="pool-water-chemistry-log.html" style="color:#a5e3f7;">Registro químico</a>
+        <a href="pool-service-report.html" style="color:#a5e3f7;">Informes</a>
+        <a href="index.html#pricing" style="color:#a5e3f7;">Precios</a>
+    </div></nav><div class="langs"><a href="../pool-water-chemistry-log.html">English</a> · <a style="color:#fff;font-weight:600;" href="#">Español</a> · <a href="../pt/pool-water-chemistry-log.html">Português</a></div>
+    <header><div class="container">
+        <h1>Un registro químico que sí vas a llenar</h1><p>Tira reactiva, toc-toc-toc, listo: cloro libre, pH, alcalinidad y estabilizante guardados en el historial de esa piscina en menos de un minuto, con una mano, junto al agua.</p>
+        <a href="https://apps.apple.com/us/app/pool-route-book-pool-service/id6804212671" class="cta-button" target="_blank" rel="noopener">Descargar en App Store</a>
+    </div></header>
+    <section class="alt"><div class="container"><div class="prose"><h3>Los números en una libreta no protegen a nadie</h3><p>La lectura que importa es la que puedes abrir seis semanas después: cuánto retenía el cloro al anochecer, qué piscina se toma el ácido, cuándo se hizo el último shock. La libreta se queda en la camioneta, y las libretas no responden clientes.</p><h3>Lecturas, químicos e historial — por piscina</h3><p>Cada visita acepta los cuatro números que mantienen el agua honesta (cloro libre, pH, alcalinidad total, estabilizante) más los productos aplicados con cantidades. Se abre en tus valores objetivo, así confirmas en vez de teclear. El historial muestra cada lectura desde el día uno: cuando una piscina persigue el pH semana tras semana, el problema se ve solo.</p><h3>El registro que se paga en discusiones</h3><p>Piscina verde, «la shockeaste de más», «por qué arden los ojos» — cada conversación dura segundos cuando abres el registro y lees las últimas ocho visitas en voz alta. Estuviste, el agua estaba en rango, acá está la prueba.</p></div>
+        <div class="shot-row"><img src="../images/shot2.jpg" alt="Lecturas químicas registradas en una visita" loading="lazy"><img src="../images/shot4.jpg" alt="Historial de agua de una piscina" loading="lazy"></div>
+    </div></section>
+    <section><div class="container">
+        <h2>Preguntas frecuentes</h2><div class="prose"><div class="faq-item"><h3>¿Necesito suscripción para registrar agua?</h3><p>No — registrar lecturas y químicos es gratis para empezar. Pro quita el límite de piscinas y guarda el historial completo.</p></div><div class="faq-item"><h3>¿Qué lecturas puedo guardar?</h3><p>Cloro libre, pH, alcalinidad total y estabilizante (CYA), más los químicos que aplicaste con cantidades, notas y fotos opcionales por visita.</p></div><div class="faq-item"><h3>¿Puedo ver la tendencia de una piscina?</h3><p>Sí. Cada piscina guarda todo su historial en la app: los vaivenes de pH o la demanda de cloro repetida se notan de un vistazo.</p></div><div class="faq-item"><h3>¿Es una calculadora de química?</h3><p>No — es la capa de registro: tú mides el agua, la app guarda qué encontraste y qué hiciste al respecto.</p></div></div>
+    </div></section>
+    <section class="cta-band" style="background:linear-gradient(135deg,#0e7490,#155e75);color:white;text-align:center;"><div class="container">
+        <h2 style="color:white;">Pruébala en tu próxima ruta</h2>
+        <p style="max-width:640px;margin:0 auto 26px;opacity:.95;">Gratis para empezar — sin cuenta ni tarjeta. Funciona sin señal al fondo de un patio.</p>
+        <a href="https://apps.apple.com/us/app/pool-route-book-pool-service/id6804212671" class="cta-button" target="_blank" rel="noopener">Descargar en App Store</a>
+        <div class="qrbox"><img src="../images/qr-appstore.png" alt="QR App Store"><span>¿Estás en ordenador? Apunta la cámara del móvil al código: abre directo en la App Store. Desde el móvil, pulsa el botón.</span></div>
+    </div></section>
+    <footer><div class="container">
+        <p>© 2026 Pool Route Book. Hecho para técnicos independientes de servicio de piscinas.</p>
+        <p style="margin-top:10px;font-size:.9rem;"><a href="https://xiaohao7023.github.io/poolroute-legal/privacy.html">Política de privacidad</a> | <a href="https://xiaohao7023.github.io/poolroute-legal/terms.html">Términos de uso</a> | <a href="https://xiaohao7023.github.io/poolroute-legal/support.html">Soporte</a></p>
+    </div></footer>
+</body></html>
