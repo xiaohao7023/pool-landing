@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pool Route Book — serviço de piscinas e planeador de rotas</title>
+    <meta name="description" content="Planeie a rota da semana, registe cada visita e guarde o histórico de cada piscina num só lugar — feito para técnicos independentes, não para software de escritório.">
+    <link rel="canonical" href="https://xiaohao7023.github.io/pool-landing/pt/">
+    <link rel="alternate" hreflang="en" href="https://xiaohao7023.github.io/pool-landing/index.html">
+    <link rel="alternate" hreflang="es" href="https://xiaohao7023.github.io/pool-landing/es/index.html">
+    <link rel="alternate" hreflang="pt" href="https://xiaohao7023.github.io/pool-landing/pt/index.html">
+    <link rel="alternate" hreflang="x-default" href="https://xiaohao7023.github.io/pool-landing/index.html">
+    <meta property="og:title" content="Pool Route Book — serviço de piscinas e planeador de rotas"><meta property="og:description" content="Planeie a rota da semana, registe cada visita e guarde o histórico de cada piscina num só lugar — feito para técnicos independentes, não para software de escritório.">
+    <meta property="og:image" content="https://xiaohao7023.github.io/pool-landing/images/shot1.jpg"><meta property="og:type" content="website">
+    <meta property="og:url" content="https://xiaohao7023.github.io/pool-landing/pt/">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Pool Route Book: Pool Service", "operatingSystem": "iOS", "applicationCategory": "BusinessApplication", "description": "Planeie a rota da semana, registe cada visita e guarde o histórico de cada piscina num só lugar — feito para técnicos independentes, não para software de escritório.", "downloadUrl": "https://apps.apple.com/us/app/pool-route-book-pool-service/id6804212671"}</script>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏊</text></svg>">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6; color: #12232b; background: #f7fbfd;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header {
+            background: linear-gradient(135deg, #0891b2 0%, #0e7490 55%, #155e75 100%);
+            color: white; padding: 80px 0 60px; text-align: center;
+        }
+        header h1 { font-size: 2.5rem; margin-bottom: 18px; font-weight: 700; }
+        header p { font-size: 1.3rem; opacity: .95; max-width: 720px; margin: 0 auto 30px; }
+        .cta-button {
+            display: inline-block; background: white; color: #0e7490; padding: 16px 40px;
+            border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 1.1rem;
+            transition: transform .2s, box-shadow .2s; box-shadow: 0 4px 15px rgba(0,0,0,.2);
+        }
+        .cta-button:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,.3); }
+        .hero-shots { margin-top: 50px; display: flex; justify-content: center; gap: 18px; flex-wrap: wrap; }
+        .hero-shots img { max-width: 210px; border-radius: 14px; box-shadow: 0 10px 30px rgba(0,0,0,.35); }
+        section { padding: 80px 0; }
+        .features { background: white; }
+        h2 { text-align: center; font-size: 2.2rem; margin-bottom: 14px; }
+        .sub { text-align: center; color: #5c7480; font-size: 1.1rem; max-width: 720px; margin: 0 auto 46px; }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+        .feature { text-align: center; }
+        .feature-icon { font-size: 3rem; margin-bottom: 18px; }
+        .feature h3 { font-size: 1.4rem; margin-bottom: 12px; color: #0e7490; }
+        .feature p { color: #55697a; font-size: 1.02rem; }
+        .benefits { background: #eaf5f9; }
+        .benefits-list { max-width: 820px; margin: 0 auto; }
+        .benefit-item { background: white; padding: 28px 30px; margin-bottom: 18px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,.05); }
+        .benefit-item h3 { color: #0e7490; margin-bottom: 8px; font-size: 1.25rem; }
+        .benefit-item p { color: #55697a; }
+        .shots { background: white; }
+        .shot-row { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+        .shot-row img { max-width: 190px; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,.12); }
+        .pricing { background: #f7fbfd; text-align: center; }
+        .pricing-cards { display: flex; justify-content: center; gap: 26px; margin-top: 46px; flex-wrap: wrap; }
+        .pricing-card { background: white; padding: 36px 32px; border-radius: 14px; min-width: 260px; max-width: 300px; box-shadow: 0 4px 15px rgba(0,0,0,.08); display: flex; flex-direction: column; }
+        .pricing-card h3 { font-size: 1.6rem; margin-bottom: 6px; color: #0e7490; }
+        .price { font-size: 2.4rem; font-weight: 700; margin: 16px 0; }
+        .price-period { font-size: 1rem; color: #5c7480; font-weight: normal; }
+        .pricing-card ul { list-style: none; margin: 22px 0; text-align: left; flex: 1; }
+        .pricing-card li { padding: 9px 0; border-bottom: 1px solid #e6eef2; font-size: .98rem; }
+        .pricing-card li:before { content: "✓ "; color: #0891b2; font-weight: bold; margin-right: 8px; }
+        .tag { display: inline-block; background: #0891b2; color: white; font-size: .78rem; padding: 4px 12px; border-radius: 20px; margin-bottom: 10px; }
+        .note { margin-top: 34px; color: #5c7480; font-size: .95rem; }
+        footer { background: #12232b; color: #cbd9e0; padding: 40px 0; text-align: center; }
+        footer a { color: #7dd3fc; text-decoration: none; }
+        @media (max-width: 600px) { header h1 { font-size: 1.9rem; } header p { font-size: 1.1rem; } .hero-shots img { max-width: 44%; } }
+    
+        .langs { text-align:center; padding-bottom:10px; font-size:.85rem; opacity:.95; }
+        .langs a { color:#a5e3f7; }
+    </style>
+</head>
+<body>
+    <nav><div class="container" style="display:flex;gap:22px;justify-content:center;flex-wrap:wrap;padding-top:12px;padding-bottom:12px;">
+        <a style="color:#fff;font-weight:600;" href="index.html">Início</a>
+        <a href="pool-route-app.html" style="color:#a5e3f7;">App de rotas</a>
+        <a href="pool-water-chemistry-log.html" style="color:#a5e3f7;">Registo químico</a>
+        <a href="pool-service-report.html" style="color:#a5e3f7;">Relatórios</a>
+        <a href="index.html#pricing" style="color:#a5e3f7;">Preços</a>
+    </div></nav><div class="langs"><a href="../index.html">English</a> · <a href="../es/">Español</a> · <a style="color:#fff;font-weight:600;" href="#">Português</a></div>
+    <header><div class="container">
+        <h1>Pool Route Book</h1><p>Planeie a rota da semana, registe cada visita e guarde o histórico de cada piscina num só lugar — feito para técnicos independentes, não para software de escritório.</p>
+        <a href="https://apps.apple.com/us/app/pool-route-book-pool-service/id6804212671" class="cta-button" target="_blank" rel="noopener">Transferir na App Store</a>
+        <div class="qrbox"><img src="../images/qr-appstore.png" alt="QR App Store Pool Route Book"><span>No computador? Aponte a câmara do telemóvel ao código — abre direto na App Store. No telemóvel, basta tocar no botão.</span></div>
+        <div class="hero-shots"><img src="../images/shot1.jpg" alt="Ruta / rota semanal"><img src="../images/shot2.jpg" alt="Visita / registo"><img src="../images/shot3.jpg" alt="Piscina / piscina"></div>
+    </div></header>
+    <section class="features"><div class="container">
+        <h2>Tudo o que uma rota precisa</h2><p class="sub">As cinco coisas que faz mesmo numa rota — planeadas, registadas e comprováveis.</p>
+        <div class="features-grid"><div class="feature"><div class="feature-icon">🗓️</div><h3>Planeie a semana</h3><p>Atribua piscinas aos dias com hora e duração, veja a rota inteira de um relance e junte uma visita extra quando um cliente liga. A sua rota fixa mantém-se organizada semana após semana.</p></div><div class="feature"><div class="feature-icon">🧪</div><h3>Registe leituras reais</h3><p>Anote cloro livre, pH, alcalinidade total e estabilizante junto à água, mais cada produto que aplicou. Os números ficam no histórico da piscina — não num caderno que nunca mais vai abrir.</p></div><div class="feature"><div class="feature-icon">✅</div><h3>A sua própria lista</h3><p>Skimmer, escova, aspirador, cestos — assinale as tarefas que faz ou crie a sua lista à medida do seu serviço. Nada fica para trás a meio da rota.</p></div><div class="feature"><div class="feature-icon">📄</div><h3>Relatórios em PDF</h3><p>Transforme uma visita concluída num relatório PDF limpo com leituras, produtos, tarefas, notas e fotos antes/depois. Envie ao cliente e a conversa «vieram ou não vieram?» acaba.</p></div><div class="feature"><div class="feature-icon">📍</div><h3>Conduza direto à paragem</h3><p>Cada piscina traz a morada, notas de portão e acesso, telefone e histórico de serviço. Toque na morada e abre no Apple Maps.</p></div><div class="feature"><div class="feature-icon">🔒</div><h3>Sem conta, funciona offline</h3><p>Os dados dos clientes e piscinas ficam no seu dispositivo. Sem registos, sem painéis para configurar, sem mensalidade de software. Funciona no fundo de um quintal sem sinal.</p></div></div>
+    </div></section>
+    <section class="benefits"><div class="container">
+        <h2>Para técnicos sozinhos e pequenas empresas</h2><p class="sub">A maioria do software de piscinas tem preço e desenho para empresas com escritório. Quem conduz a carrinha é você.</p>
+        <div class="benefits-list"><div class="benefit-item"><h3>Livre-se do caderno e do grupo de mensagens</h3><p>Cada piscina, leitura e visita vive numa app que já leva no bolso — nada de folhas de rota em papel nem fotografias perdidas numa conversa.</p></div><div class="benefit-item"><h3>Prova de que esteve lá</h3><p>Fotos com data antes e depois, os produtos que aplicou e as tarefas concluídas. Quando um cliente põe uma visita em causa, envia o relatório em vez de discutir.</p></div><div class="benefit-item"><h3>Histórico que responde a perguntas</h3><p>«Quando foi a última cloração de choque?» Abra a piscina e está tudo — incluindo códigos de portão e notas de equipamento que senão teria de reaprender todos os anos.</p></div><div class="benefit-item"><h3>Rápido porque trabalha de pé</h3><p>Registar uma visita leva segundos, com uma mão, à beira da água. Esse foi todo o caderno de encargos — sem formulários, sem campos obrigatórios, sem formação.</p></div></div>
+    </div></section>
+    <section class="shots"><div class="container">
+        <h2>Veja por dentro</h2><p class="sub">Ecrãs reais, rota real.</p>
+        <div class="shot-row"><img src="../images/shot1.jpg" alt="" loading="lazy"><img src="../images/shot2.jpg" alt="" loading="lazy"><img src="../images/shot3.jpg" alt="" loading="lazy"><img src="../images/shot4.jpg" alt="" loading="lazy"><img src="../images/shot5.jpg" alt="" loading="lazy"></div>
+    </div></section>
+    <section class="pricing" id="pricing"><div class="container">
+        <h2>Preços simples</h2><p class="sub">Comece grátis com as primeiras piscinas sem custo. O Pool Route Pro desbloqueia piscinas e rotas ilimitadas.</p>
+        <div class="pricing-cards"><div class="pricing-card"><span class="tag">Mais popular</span><h3>Mensal</h3>
+            <div class="price">$5.99<span class="price-period">/mês</span></div>
+            <ul><li>Piscinas ilimitadas</li><li>Rotas e visitas ilimitadas</li><li>Histórico químico da água</li><li>Relatórios de serviço em PDF</li><li>Cancele quando quiser</li></ul>
+            <a href="https://apps.apple.com/us/app/pool-route-book-pool-service/id6804212671" class="cta-button" target="_blank" rel="noopener" style="background:#0e7490;color:white;">Experimentar grátis</a></div><div class="pricing-card" style="border: 2px solid #0891b2;"><h3>Anual</h3>
+            <div class="price">$19.99<span class="price-period">/ano</span></div><p style="color:#15803d;font-weight:600;margin-bottom:6px;">Poupa 72% vs mensal</p>
+            <ul><li>Tudo do Mensal</li><li>Um só pagamento, toda a época</li><li>Melhor valor para rotas a tempo inteiro</li></ul>
+            <a href="https://apps.apple.com/us/app/pool-route-book-pool-service/id6804212671" class="cta-button" target="_blank" rel="noopener" style="background:#0e7490;color:white;">Experimentar grátis</a></div><div class="pricing-card"><h3>Vitalício</h3>
+            <div class="price">$24.99<span class="price-period">pagamento único</span></div>
+            <ul><li>Tudo do Pro</li><li>Sem renovações, nunca</li><li>É vosso enquanto durar a sua rota</li></ul>
+            <a href="https://apps.apple.com/us/app/pool-route-book-pool-service/id6804212671" class="cta-button" target="_blank" rel="noopener" style="background:#0e7490;color:white;">Comprar</a></div></div>
+        <p class="note">Os preços locais incluem os impostos de cada país (preços regionais da Apple). Não aplicável ao Partilha Familiar.</p>
+    </div></section>
+    <section class="benefits"><div class="container">
+        <h2>Para saber mais</h2><p class="sub">Três guias curtos, escritos para a forma como uma rota corre mesmo.</p>
+        <div class="benefits-list"><div class="benefit-item"><h3><a href="pool-route-app.html" style="color:#0e7490;text-decoration:none;">A app de rotas para quem limpa piscinas a sério →</a></h3><p>Porque é que uma grelha semanal, notas de paragem e visitas extra ganham às folhas de papel.</p></div><div class="benefit-item"><h3><a href="pool-water-chemistry-log.html" style="color:#0e7490;text-decoration:none;">Registo químico que vai mesmo preencher →</a></h3><p>Cloro, pH, alcalinidade e estabilizante por piscina, com o histórico que responde «quando foi o último choque?».</p></div><div class="benefit-item"><h3><a href="pool-service-report.html" style="color:#0e7490;text-decoration:none;">Relatórios que acabam o «vieram ou não?» →</a></h3><p>O que leva um PDF de visita e como enviá-lo antes de sair da entrada.</p></div></div>
+    </div></section>
+    <section class="features" id="support"><div class="container">
+        <h2>Apoio</h2>
+        <p style="text-align:center; color:#55697a;">Dúvida, pedido de função ou algo que não funciona na rota? Escreva-me diretamente — leio tudo e costumo responder num dia.</p>
+        <p style="text-align:center; margin-top:18px;"><a href="mailto:huangxiaohao7023@icloud.com" style="color:#0e7490;font-weight:600;font-size:1.1rem;">huangxiaohao7023@icloud.com</a></p>
+    </div></section>
+    <footer><div class="container">
+        <p>© 2026 Pool Route Book. Feito para técnicos independentes de serviço de piscinas.</p>
+        <p style="margin-top:10px;font-size:.9rem;"><a href="https://xiaohao7023.github.io/poolroute-legal/privacy.html">Política de privacidade</a> | <a href="https://xiaohao7023.github.io/poolroute-legal/terms.html">Termos de utilização</a> | <a href="https://xiaohao7023.github.io/poolroute-legal/support.html">Apoio</a></p>
+    </div></footer>
+</body></html>
