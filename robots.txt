@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://xiaohao7023.github.io/pool-landing/sitemap.xml
